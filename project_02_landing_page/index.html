@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project 1 Landing Page</title>
   <link rel="stylesheet" href="style.css"></link>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <div class="hero">
@@ -28,51 +34,67 @@
    
     <h1>This website is awesome</h1>
     <p>This website has some subtext that goes here under the main title. It’s a smaller font and the color is lower contrast </p>
-  
-    <a href="#" class="button">Log in</a>
-    <a href="#" class="button">Sign Up</a>
-  </div>
-  <!-- cards -->
-  <h2>Some random images.</h2>
-  <div class="cards column">
-    <div class="card">
-      <img src="assets/images/card-1.png">
-      <p>This is some subtext under an illustration or image.</p>
+    <div class="column">
+      <a href="#" class="button border-button">Log in</a>
+      <a href="#" class="button button-ghost-secondary-500">Sign Up</a>
     </div>
 
-    <div class="card">
-      <img src="assets/images/card-1.png">
-      <p>This is some subtext under an illustration or image.</p>
+  </div>
+  <section class="main">
+    <!-- cards -->
+    <div class="container">
+        <h2>Some random images.</h2>
+        <div class="cards column">
+          <div class="card">
+            <img src="assets/images/card-1.png">
+            <p>This is some subtext under an illustration or image.</p>
+          </div>
+    
+          <div class="card">
+            <img src="assets/images/card-1.png">
+            <p>This is some subtext under an illustration or image.</p>
+          </div>
+    
+          <div class="card">
+            <img src="assets/images/card-1.png">
+            <p>This is some subtext under an illustration or image.</p>
+          </div>
+    
+          <div class="card">
+            <img src="assets/images/card-1.png">
+            <p>This is some subtext under an illustration or image.</p>
+          </div>
+        </div>
     </div>
 
-    <div class="card">
-      <img src="assets/images/card-1.png">
-      <p>This is some subtext under an illustration or image.</p>
+    <!-- testimonial -->
+    <div class="container-fluid">
+      <div class="container bg-neutral-50">
+        <p class="h-2 extra-light">
+          This is an inspiring quite, or a testimonial from a customer. Maybe it’s just filling up space, or maybe people will actually read it. Who knows? All i know is that it looks nice.
+        </p>
+        <p class="h-3 text-right">
+          - Customer #3  
+        </p>
+      </div>
     </div>
 
-    <div class="card">
-      <img src="assets/images/card-1.png">
-      <p>This is some subtext under an illustration or image.</p>
+    <div class="container-fluid">
+      <!-- call to action -->
+      <div class="cta-bar container bg-primary-500 text-shade-0">
+        <p class="text-shade-0 h-3">
+          Call to action! It's time!
+        </p>
+        <p class="text-shade-0">Sign up for our product by clicking that button right over there!</p>
+        <a href="#" class="button button-ghost-shade-0">Sign up</a>
+      </div>
     </div>
-  </div>
-  <!-- testimonial -->
-  <div class="bg-neutral-50">
-    <p class="h3 extra-light">
-      This is an inspiring quite, or a testimonial from a customer. Maybe it’s just filling up space, or maybe people will actually read it. Who knows? All i know is that it looks nice.
-    </p>
-    <p class="h4">
-      - Customer #3  
-    </p>
-  </div>
-  <!-- call to action -->
-  <div class="bg-primary-500">
-    <p class="h4">
-      Call to action! It's time!
-    </p class="par-2">
-    <p>Sign up for our product by clicking that button right over there!</p>
-    <a href="#" class="button button-ghost-light"
-  </div>
-  <a href="#">Excercise 2 _ Landing Page</a>
+
+  </section>
+
+  <footer class="bg-neutral-50">
+    <p>Footer</p>
+  </footer>
   <script src="main.js"></script>
 </body>
 </html>
