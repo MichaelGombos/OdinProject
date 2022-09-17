@@ -158,7 +158,9 @@ footer{
 
 
 .button{
+  font-size:2.1rem;
   background-color:var(--secondary-500);
+  border:none;
   color:var(--shade-0);
   margin:10px 0px;
   padding:10px 30px;
@@ -272,7 +274,9 @@ footer{
 .bg-primary-500{
   background-color:var(--primary-500);
 }
-
+.display-none{
+  display:none;
+}
 @media only screen and (min-width : 722px){
   /* tablet sizes */
   header{

@@ -29,15 +29,17 @@
     </header>
    <div class="hero-content">
       <h1>Rock paper scissosrs</h1>
-      <p>First to 5 points wins</p>
+      <p class="subheading">First to 5 points wins</p>
       <div class="column row-tablet">
-        <a href="#" class="button border-button">Rock</a>
-        <a href="#" class="button border-button">Paper</a>
-        <a href="#" class="button border-button">Scissors</a>
-        <a href="#" class="button button-ghost-secondary-500">Restart</a>
+        <div id="game-buttons">
+          <button id="rock" class="button border-button">Rock</button>
+          <button id="paper" class="button border-button">Paper</button>
+          <button id="scissors" class="button border-button">Scissors</button>
+        </div>
+        <button href="#" id="restart" class="button button-ghost-secondary-500 display-none">Restart</button>
       </div>
       <p>You :: <span id="player-score">0</span></p>
-      <p>Computer :: <span id="player-score">0</span></p>
+      <p>Computer :: <span id="computer-score">0</span></p>
    </div>
   </div>
 

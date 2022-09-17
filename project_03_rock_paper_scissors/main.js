@@ -1,9 +1,24 @@
 console.log("well hello?");
 
+// dom elements
+
+const rockInput = document.getElementById("rock");
+const paperInput = document.getElementById("paper");
+const scissorsInput = document.getElementById("scissors");
+
+const restartInput = document.getElementById("restart");
+
+const playerScoreDisplay = document.getElementById("player-score");
+const computerScoreDisplay = document.getElementById("computer-score");
+
+const subheading = document.getElementsByClassName("subheading")[0];
+
+
+
+
 const options = ["rock","paper","scissors"];
 
 let playing = true;
-let restart;
 
 let playerScore = 0;
 let computerScore = 0;
@@ -53,6 +68,7 @@ const calcRound = (pChoice,cChoice) =>{
       }
     default:
       //invalid choice
+      console.log(pChoice);
       return -2;
   }
 }
@@ -75,29 +91,60 @@ const awardPoints = (roundValue) => {
       console.log("the player won this round")
       break;
   }
+  //make dom match
+  playerScoreDisplay.innerText = playerScore;
+  computerScoreDisplay.innerText = computerScore;
 }
 const declareWinner = (playerScore, computerScore) =>{
+  let winner;
   if(playerScore > computerScore){
-    console.log("The player won this game!")
+    winner = "player";
   }
   else if(playerScore < computerScore){
-    console.log("The computer won this game!")
+    winner = "computer";
   }
+  subheading.innerHTML = `The ${winner} won this round`;
+  //hide buttons, show restart
+  document.getElementById("game-buttons").classList.add("display-none");
+  document.getElementById("restart").classList.remove("display-none");
+
 }
 
-const gameLoop = () =>{
-  while(playerScore < 5 && computerScore < 5){
-    playerChoice = getPlayerChoice();
-    computerChoice = getComputerChoice();
-    awardPoints(calcRound(playerChoice,computerChoice));
-    console.log(playerChoice,computerChoice);
-    console.log(playerScore,computerScore);
-  }
+const restartGame = () =>{
+  //
+  subheading.innerHTML = "First to 5 points wins";
+  //hide restart, show buttons
+  document.getElementById("game-buttons").classList.remove("display-none");
+  document.getElementById("restart").classList.add("display-none");
+
+  //reset score
+  playerScore =0;
+  computerScore =0;
+  playerScoreDisplay.innerText = playerScore;
+  computerScoreDisplay.innerText = computerScore;
 }
 
-gameLoop();
+
+const gameLoop = (playerChoice) => () => {
+  computerChoice = getComputerChoice();
+  awardPoints(calcRound(playerChoice,computerChoice));
+  console.log(playerChoice,computerChoice);
+  console.log(playerScore,computerScore);
+
+  if(playerScore >= 2 || computerScore >=2 ){
+    console.log("declare and reset!");
+    declareWinner(playerScore,computerScore);
+ 
+  }
+}
+// declareWinner(playerScore,computerScore);
 
 
-declareWinner(playerScore,computerScore);
+ 
+// event listeners
+rockInput.addEventListener("click",gameLoop("rock"));
+paperInput.addEventListener("click",gameLoop("paper"));
+scissorsInput.addEventListener("click",gameLoop("scissors"));
 
+restartInput.addEventListener("click",restartGame);
 
