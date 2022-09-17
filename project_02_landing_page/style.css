@@ -198,3 +198,36 @@ footer{
   background-color:var(--primary-500);
 }
 
+@media only screen and (min-width : 722px){
+  /* tablet sizes */
+  header{
+    display:flex;
+    flex-direction:row;
+
+   justify-content: space-between;
+  }
+  header nav ul{
+    display:flex;
+    flex-direction:row;
+  }
+  header nav ul li{
+    padding:0px 10px;
+  }
+
+  .button{
+    width:fit-content;
+
+    margin-right:10px;
+  }
+
+  .row-tablet{
+    display:flex;
+    flex-direction:row;
+  }
+
+  .cta-bar{
+    align-items:start;
+    text-align:start;
+  }
+
+}
