@@ -185,6 +185,10 @@ footer{
   align-items: center;
   text-align: center;
 }
+.cta-bar p{
+  margin-top:0;
+  margin-bottom:10px;
+}
 
 /*Utility, colors */
 
@@ -228,6 +232,28 @@ footer{
   .cta-bar{
     align-items:start;
     text-align:start;
+  }
+
+}
+
+@media only screen and (min-width : 1300px){
+
+  .hero-content{
+    max-width:50%;
+  }
+  .hero,.container{
+    max-width: 1137px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .cta-bar{
+    flex-direction:row;
+    justify-content: space-between;
+  }
+  .row-desktop{
+    display:flex;
+    flex-direction:row;
   }
 
 }

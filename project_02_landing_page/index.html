@@ -31,21 +31,21 @@
         </ul>
       </nav>
     </header>
-   
-    <h1>This website is awesome</h1>
-    <p>This website has some subtext that goes here under the main title. It’s a smaller font and the color is lower contrast </p>
-    <div class="column row-tablet">
-      <a href="#" class="button border-button">Log in</a>
-      <a href="#" class="button button-ghost-secondary-500">Sign Up</a>
-    </div>
-
+   <div class="hero-content">
+      <h1>This website is awesome</h1>
+      <p>This website has some subtext that goes here under the main title. It’s a smaller font and the color is lower contrast </p>
+      <div class="column row-tablet">
+        <a href="#" class="button border-button">Log in</a>
+        <a href="#" class="button button-ghost-secondary-500">Sign Up</a>
+      </div>
+   </div>
   </div>
   <section class="main">
     <!-- cards -->
     <div class="container">
         <h2>Some random images.</h2>
         <div class="cards column row-tablet">
-          <div class="column">
+          <div class="column row-desktop">
             <div class="card">
               <img src="assets/images/card-1.png">
               <p>This is some subtext under an illustration or image.</p>
@@ -56,7 +56,7 @@
               <p>This is some subtext under an illustration or image.</p>
             </div>
           </div>
-          <div class="column ">
+          <div class="column row-desktop">
             <div class="card">
               <img src="assets/images/card-1.png">
               <p>This is some subtext under an illustration or image.</p>
@@ -74,8 +74,8 @@
     </div>
 
     <!-- testimonial -->
-    <div class="container-fluid">
-      <div class="container bg-neutral-50">
+    <div class="container-fluid bg-neutral-50">
+      <div class="container ">
         <p class="h-2 extra-light">
           This is an inspiring quite, or a testimonial from a customer. Maybe it’s just filling up space, or maybe people will actually read it. Who knows? All i know is that it looks nice.
         </p>
@@ -85,13 +85,14 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid bg-primary-500">
       <!-- call to action -->
-      <div class="cta-bar container bg-primary-500 text-shade-0">
-        <p class="text-shade-0 h-3">
+      <div class="cta-bar container text-shade-0">
+        <div class="cta-bar-heading">        <p class="text-shade-0 h-3">
           Call to action! It's time!
         </p>
-        <p class="text-shade-0">Sign up for our product by clicking that button right over there!</p>
+        <p class="text-shade-0">Sign up for our product by clicking that button right over there!</p></div>
+
         <a href="#" class="button button-ghost-shade-0">Sign up</a>
       </div>
     </div>
