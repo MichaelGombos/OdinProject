@@ -1,0 +1,9 @@
+.hero-content{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+/*need styles for hover boxes
+
+/*need to add a new style in main for input

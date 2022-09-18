@@ -156,7 +156,16 @@ footer{
   flex-direction:column;
 }
 
-
+.text-input{
+  font-size:2.1rem;
+  background-color:var(--shade-0);
+  border:none;
+  color:var(--neutral-200);
+  margin:10px 0px;
+  padding:10px 30px;
+  border-radius:5px;
+  border:2px solid var(--neutral-200);
+}
 .button{
   font-size:2.1rem;
   background-color:var(--secondary-500);
