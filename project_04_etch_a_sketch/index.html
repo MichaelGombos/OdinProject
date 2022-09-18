@@ -29,12 +29,15 @@
     </header>
    <div class="hero-content">
       <h1>Etch a Sketch</h1>
-      <label for="width">Width:</label>
-      <input type="text" id="width" class="text-input" placeholder="16"></button>
-      <lavel for="height">Height:</lavel>
-      <input type="text" id="height" class="text-input" placeholder="16"></button>
-      <lavel for="delay">Delay (ms):</lavel>
-      <input type="text" id="delay" class="text-input" placeholder="5000"></button>
+      <form>
+        <label for="width">Width:</label>
+        <input type="text" id="width" class="text-input"></button>
+        <lavel for="height">Height:</lavel>
+        <input type="text" id="height" class="text-input"></button>
+        <lavel for="delay">Delay (ms):</lavel>
+        <input type="text" id="delay" class="text-input" placeholder="5000"></button>
+        <button id="set" class="button">set</button>
+      </form>
       <button id="reset" class="button button-ghost-secondary-500">Reset</button>
       <p>Draw by hovering over the boxes with the mouse</p>
       <div id="grid">
