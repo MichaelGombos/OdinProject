@@ -2,6 +2,9 @@
 .hero header nav ul{
   flex-direction:column;
 }
+.hero header{
+  margin-bottom:50px;
+}
 header{
   justify-content:center;
 }
@@ -19,6 +22,14 @@ header{
   flex-direction:column;
 
 }
+#calculator .col-1{
+  margin: 3px;
+}
+#calculator .col-2{
+  width:53%;
+  margin: 3px;
+}
+
 #calculator .button p{ 
   width:fit-content;
   color:white;
@@ -30,12 +41,20 @@ header{
 }
  .button{
   padding:10px;
-  margin:2px;
-  width:90%;
+  margin:0;
+  width:100%;
   display:flex;
   flex-direction:column;
   align-items:center;
 }
-.col-2 .button{
-  width:95%;
+
+#display{
+  border:2px solid var(--neutral-300);
+  border-radius:5px;
+  margin-bottom:10px;
+}
+#display p{
+  margin:5px 0;
+  padding:10px;
+  text-align:end;
 }
