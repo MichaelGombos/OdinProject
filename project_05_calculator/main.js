@@ -152,5 +152,70 @@ commandButtons.forEach(button => button.addEventListener("click",commandHandler(
 
 numberButtons.forEach(button => button.addEventListener("click",numberHandler(button.dataset.command)));
 
+//keyboard support
+/*
+c,a clear
+s sign
+p percent
+/ divide
+x multiply
+- subtrace
++ plus
+= equals
+. decimal
+*/
+document.addEventListener("keydown",(e) =>{
+  let name = e.key;
+  let code = e.code;
+  let digits = []
+  console.log("key",name,"code",code);
+  console.log(isNumeric(name));
 
+  switch(isNumeric(name)){
+    case true:
+      numberHandler(parseInt(name))(e);
+      break;
+    case false:
+      break;
+  }
+  switch(name){
+    case "c":
+      clearDisplay();
+      break;
+    case "a":
+      clearDisplay();
+      break;
+    case "/":
+      operatorHandler("divide")(e);
+      break;
+    case "x":
+      operatorHandler("multiply")(e);
+      break;
+    case "-":
+      operatorHandler("subtract")(e);
+      break;
+    case "+":
+      operatorHandler("add")(e);
+      break;
+    case "=":
+      commandHandler("equals")(e);
+      break;
+    case "Enter":
+      commandHandler("equals")(e);
+      break;
+    case ".":
+      commandHandler("decimal")(e);
+      break;
+    case "s":
+      commandHandler("sign")(e);
+      break;
+    case "p":
+      commandHandler("percent")(e);
+      break;
+  }
+});
 
+function isNumeric(str) {
+  if (typeof str != "string") return false
+  return !isNaN(str) && !isNaN(parseFloat(str)) 
+}
