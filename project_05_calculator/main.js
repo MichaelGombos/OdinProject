@@ -12,6 +12,10 @@ const operate = (operator,num1,num2) =>{
       break;
     case "divide":
       //check for div by 0 error
+      if(num2 == 0){
+        result = "Snarky error message";
+        break;
+      }      
       result = num1/num2;
       break;
     case "percentage":
@@ -28,6 +32,7 @@ let inputObject = {
   lastNumber : 0,
   nextNumber : 0,
   operator :"" ,
+  nextDecimal:false,
   steps: []
 }
 
@@ -47,7 +52,7 @@ const operatorHandler = (command) => (e) =>{
     console.log(inputObject.lastNumber,command,inputObject.nextNumber);
 
     inputObject.nextNumber = (operate(command,inputObject.lastNumber,inputObject.nextNumber));
-    display.innerHTML = inputObject.nextNumber;
+    updateDisplay();
   }
   else{
     inputObject.lastNumber = inputObject.nextNumber;
@@ -68,28 +73,63 @@ const commandHandler = (command) => (e) =>{
     case("clear"):
       inputObject.lastNumber = 0;
       inputObject.nextNumber = 0;
-      display.innerHTML = 0;
+      clearDisplay();
       break;
     case("sign"):
       inputObject.nextNumber = 0 - inputObject.nextNumber;
-      display.innerHTML = inputObject.nextNumber.toString();
+      updateDisplay();
       break;
     case("equals"):
       inputObject.nextNumber = (operate(inputObject.operator,inputObject.lastNumber,inputObject.nextNumber));
-      display.innerHTML = inputObject.nextNumber;
+      updateDisplay();
       break;
-
+    case("decimal"):
+      inputObject.nextDecimal = true;
+      updateDisplay();
+      break;
+    
   }
 }
 
 const numberHandler = (command) => (e) =>{
+  let nextNumberString;
+  if(inputObject.nextDecimal){
+    nextNumberString = inputObject.nextNumber.toString() + "." + command;
+    console.log("this far?",nextNumberString);
+    inputObject.nextDecimal = false;
+
+  }
+  else{
+    nextNumberString = inputObject.nextNumber.toString() + command;
+  }
   //TODO set operator to none
-  let nextNumberString = inputObject.nextNumber.toString() + command;
-  inputObject.nextNumber = parseInt(nextNumberString);
+  inputObject.nextNumber = parseFloat(nextNumberString);
   //set display to nextNumberString
-  display.innerHTML = nextNumberString;
+  updateDisplay();
 }
 
+const updateDisplay = () =>{
+  if(typeof inputObject.nextNumber == "string"){
+    //for error
+    display.innerHTML = inputObject.nextNumber;
+  }
+  else{
+    //trim display decimals
+    let fixed = inputObject.nextNumber.toFixed(6);
+  
+    display.innerHTML = parseFloat(fixed);
+  }
+
+  if(inputObject.nextDecimal){
+    //add decimal
+    display.innerHTML += ".";
+  }
+}
+
+const clearDisplay = () =>{
+  //clears display and wipes input object.
+  display.innerHTML = 0;
+}
 
 //initiating elements
 
