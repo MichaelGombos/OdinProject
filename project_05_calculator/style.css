@@ -2,17 +2,19 @@
 .hero header nav ul{
   flex-direction:column;
 }
+.hero{
+  width:38%;
+}
 .hero header{
   margin-bottom:50px;
 }
 header{
-  justify-content:center;
+  justify-content:start;
 }
 .hero-content{
-  width:25%;
   display:flex;
   flex-direction:column;
-  align-items:center;
+  align-items:start;
   margin-left:auto;
   margin-right:auto;
 }
@@ -57,4 +59,10 @@ header{
   margin:5px 0;
   padding:10px;
   text-align:end;
+}
+
+@media only screen and (min-width: 1300px){
+  .hero-content {
+  max-width:100%;
+  }
 }

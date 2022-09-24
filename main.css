@@ -87,8 +87,14 @@ p{
 .text-shade-0{
   color:var(--shade-0);
 }
+.text-shade-100{
+  color:var(--shade-100);
+}
 .text-primary-500{
   color:var(--primary-500);
+}
+.text-neutral-800{
+  color:var(--neutral-800);
 }
 /* text utility */
 .text-left{
