@@ -43,3 +43,44 @@ form .column > .column{
 nav > *{
   margin:10px 0;
 }
+#display{
+  display:none;
+}
+#display .display-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.logo-mix{
+  display:none;
+}
+@media only screen and (min-width : 722px){
+  .logo-primary{
+    display:none;
+  }
+  .logo-mix{
+    display:block;
+    position:absolute;
+    right:calc(50% - 146px);
+    top:12%;
+  }
+  body{
+    padding:0;
+  }
+  #content-wrapper{
+    width:50%;
+    padding:40px 0;
+    /* space for logo */
+    margin-top: 165px;
+  }
+  #display{
+    position:relative;
+    width:50%;
+    display:block;
+  }
+  main{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+  }
+}
