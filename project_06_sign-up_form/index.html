@@ -27,50 +27,52 @@
         <br>
         <p>You know you want to</p>
       </div>
-      <form action="#" method="post">
+      <form >
         <div class="form-background">
           <legend class="h-2 extra-light">Lets do this!</legend>
-
-          <div class="column row-desktop">
-            <div class="column">
-              <label for="first">First name</label>
-              <input type="text" name="first" id="first">
+          <fieldset class="inputs">
+            <div class="column row-desktop">
+              <div class="column">
+                <label for="first">First name</label>
+                <input type="text" name="first" id="first" placeholder="First name">
+              </div>
+              <div class="column">
+                <label for="Last name">Last name</label>
+                <input type="text" name="last" id="last" placeholder="Last name">
+              </div>
             </div>
-            <div class="column">
-              <label for="Last name">Last name</label>
-              <input type="text" name="last" id="last">
+    
+            <div class="column row-desktop">
+              <div class="column">
+                <label for="first">Email</label>
+                <input type="text" name="email" id="email" required placeholder="Email*" pattern="*@*.*">
+              </div>
+              <div class="column">
+                <label for="Last name">Phone number</label>
+                <input type="tel" name="phone" id="phone" placeholder="334-334-3342">
+              </div>
             </div>
-          </div>
+    
+            <div class="column row-desktop">
+              <div class="column">
+                <label for="first">Password</label>
+                <input type="password" name="password" id="password" placeholder="10-30 characters*" min="10" max="30" required>
+              </div>
+              <div class="column">
+                <label for="confirm-password">Confirm password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="10-30 characters*" min="10" max="30" required>
+              </div>
   
-          <div class="column row-desktop">
-            <div class="column">
-              <label for="first">Email</label>
-              <input type="text" name="email" id="email">
             </div>
-            <div class="column">
-              <label for="Last name">Phone number</label>
-              <input type="text" name="phone" id="phone">
-            </div>
-          </div>
-  
-          <div class="column row-desktop">
-            <div class="column">
-              <label for="first">Password</label>
-              <input type="text" name="password" id="password">
-            </div>
-            <div class="column">
-              <label for="confirm-password">Confirm password</label>
-              <input type="text" name="confirm-password" id="confirm-password">
-            </div>
+          </fieldset>
 
-          </div>
         </div>
-        <button class="button">Create account</button>
+        <button type="submit"class="button">Create account</button>
       </form>
 
       <nav class="column">
         <a href="..//index.html">Index</a>
-        <a href="http://github.com">Github</a>
+        <a href="https://github.com/MichaelGombos/OdinProject/tree/master/project_06_sign-up_form">Github</a>
 
       </nav>
     </section>

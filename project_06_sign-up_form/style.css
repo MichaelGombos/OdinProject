@@ -14,6 +14,9 @@ body{
 form{
   margin-bottom:20px;
 }
+form fieldset{
+  border:none;
+}
 form label{
   font-weight:bold;
 }
@@ -31,6 +34,13 @@ input{
   padding:6px;
   border-radius:0;
   border:1px solid var(--neutral-500);
+}
+input:focus-visible{
+  outline:0;
+  border: 2px solid var(--shade-100);
+}
+input:focus:invalid{
+  border:2px solid var(--error-500);
 }
 form legend{
   margin-bottom:25px;
@@ -83,4 +93,18 @@ nav > *{
     display:flex;
     flex-direction:row;
   }
+}
+
+@media only screen and (min-width : 1300px){
+
+  form .column .column{
+   width:50%;
+  }
+  form fieldset , .upper-text{
+    width:75%;
+  }
+  form fieldset .column >:first-child{
+    margin-right:10px;
+  }
+
 }
