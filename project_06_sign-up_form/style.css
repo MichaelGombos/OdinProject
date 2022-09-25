@@ -1,1 +1,45 @@
 /* styles for signup form  */
+body{
+  background-color:var(--neutral-50);
+  padding:50px 0px;
+}
+#content-wrapper > *{
+  padding:0 20px;
+}
+
+#content-wrapper form{
+  color:var(--shade-100);
+  padding: 0;
+}
+form{
+  margin-bottom:20px;
+}
+form label{
+  font-weight:bold;
+}
+form .form-background{
+  background-color:var(--shade-0);
+  box-shadow:0px 5px 6px rgba(0, 0, 0, 0.12);
+
+  padding:40px 20px;
+  margin:40px 0;
+}
+form .button{
+  margin-left:20px;
+}
+input{
+  padding:6px;
+  border-radius:0;
+  border:1px solid var(--neutral-500);
+}
+form legend{
+  margin-bottom:25px;
+}
+
+form .column > .column{
+  margin:10px 0;
+}
+
+nav > *{
+  margin:10px 0;
+}
