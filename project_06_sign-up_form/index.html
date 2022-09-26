@@ -45,7 +45,7 @@
             <div class="column row-desktop">
               <div class="column">
                 <label for="first">Email</label>
-                <input type="text" name="email" id="email" required placeholder="Email*" pattern="*@*.*">
+                <input type="text" name="email" id="email" required placeholder="Email*" pattern="/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/">
               </div>
               <div class="column">
                 <label for="Last name">Phone number</label>
@@ -67,7 +67,7 @@
           </fieldset>
 
         </div>
-        <button type="submit"class="button">Create account</button>
+        <button id="form-submit" type="submit"class="button">Create account</button>
       </form>
 
       <nav class="column">
