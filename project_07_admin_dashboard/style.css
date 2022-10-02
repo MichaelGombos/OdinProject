@@ -1,1 +1,96 @@
 /* styles for admin dashboard */
+body{
+  background-color: var(--neutral-50);
+}
+
+#sidebar{
+  background-color:var(--primary-700);
+}
+#sidebar nav{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px 10px;
+}
+#logo{
+  height:50px;
+  width:auto;
+}
+header{
+  background-color:var(--shade-0);
+  border-bottom:1px solid var(--shade-100);
+  padding: 60px 10px;
+}
+header .top-header{
+  margin-bottom:40px;
+}
+header #search{
+  width:100%;
+  margin-bottom:20px;
+}
+header #search input{
+  max-width:100%;
+  width:100%;
+  box-sizing:border-box;
+  padding:7px 7px;
+  font-size:21px;
+  color:var(--neutral-500);
+}
+header #search .icon{
+  display:none;
+}
+header .bottom-header{
+}
+header #profile{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: center;
+  gap:30px;
+}
+
+header #profile .profile-small{
+  width:50px;
+  height:50px;
+}
+
+header #profile .user-name{
+  display:none;
+}
+header #actions{
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  gap:10px;
+}
+header #actions .button{
+  margin:0;
+}
+header #banner{
+  display:none;
+}
+
+.icon{
+  height:30px;
+}
+hr{
+  border: 2px solid var(--secondary-500);
+}
+
+.project,.announcements-background,.trending-background{
+  background-color:var(--shade-0);
+  border:1px solid var(--shade-100);
+}
+
+#main-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: 
+  "sidebar"
+  "header"
+  "projects"
+  "announcements"
+  "trending";
+}

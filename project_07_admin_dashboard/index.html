@@ -14,9 +14,91 @@
 
 </head>
 <body>
-  <main>
-    <h2>Admin dashboard.</h2>
-  </main>
+  <div id="main-grid">
+    
+    <aside id="sidebar">
+      <nav>
+        <img src="./assets/logo/logo.svg" alt="white logo" id="logo">
+        <a href="#">
+          <img src="./assets/icons/hamburger.svg" alt="" class="icon">
+        </a>
+      </nav>
+    </aside>
+
+    <header>
+
+      <div class="top-header">
+        <div id="search">
+          <img src="assets/icons/search.svg" alt="" class="icon search-icon">
+          <input type="text" placeholder="search...">
+        </div>
+        <div id="profile">
+          <img src="./assets/icons/bell.svg" alt="notifications icon" class="icon bell-icon">
+          <img src="./assets/images/user-profile-photo.png" alt="user profile photo-large" class="profile-small">
+          <a href="#" class="user-name">Michael Gombos</a>
+        </div>
+      </div>
+
+      <div class="bottom-header">
+        <div id="banner">
+          <img src="./assets/images/user-profile-photo.png" alt="user profile photo-small" class="profile-large">
+          <div class="banner-message">
+            <p class="p-3">Hi there,</p>
+            <p class="h-3">(@mike)</p>
+          </div>
+        </div>
+        <div id="actions">
+          <a href="#" class="button">New</a>
+          <a href="#" class="button">Upload</a>
+          <a href="#" class="button">Share</a>
+        </div>
+      </div>
+
+    </header>
+
+    <section id="projects">
+      <h2 class="h-3">Projects</h2>
+      <div class="project">
+        <strong>
+          <h3 class="par-1">Super Cool Project</h3>
+        </strong>
+        <hr/>
+        <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumasan nec. licitudin nibh erat, id facilisis felis accumasan nec.</p>
+        <div class="project-icons">
+          <a href="#"><img src="./assets/icons/house.svg" alt="" class="icon"></a>
+          <a href="#"><img src="./assets/icons/make-invisible.svg" alt="" class="icon"></a>
+          <a href="#"><img src="./assets/icons/share.svg" alt="" class="icon"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="announcements">
+      <h2 class="h-3">Announcements</h2>
+      <div class="announcements-background">
+        <div class="announcement">
+          <p class="p-2">Super Cool Project</p>
+          <hr/>
+          <p class="description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumasan nec. licitudin nibh erat, id facilisis felis accumasan nec.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="trending">
+      <h2 class="h-3">Trending</h2>
+      <div class="trending-background">
+        <div class="trending-profile">
+          <img src="./assets/images/trending-profile-pic.svg" alt="profile photo of user @tagname Real long name" class="trending-profile-photo">
+          <div class="trending-profile-info">
+            <a class="trending-profile-link">
+              <p class="text-shade-100">@tagname</p>
+            </a>
+            <p class="par-2">Real long name</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
