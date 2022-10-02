@@ -135,6 +135,7 @@ hr{
   padding:50px 20px;
   gap:10px;
   box-sizing:border-box;
+  margin:30px 0px;
 }
 .project h3,.project p{
   margin:0;
@@ -214,4 +215,46 @@ hr{
 }
 .trending-profile-name{
   color:var(--neutral-600);
+}
+
+@media only screen and (min-width : 500px){
+  header .top-header,header .bottom-header{
+    width:400px;
+  }
+  /* --- header --- */
+  header #search{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+
+  }
+  header #search .icon{
+    display:block;
+  }
+  header #profile{
+    gap:20px;
+    justify-content: space-between;
+  }
+  header #profile .user-name{
+    display:block;
+    font-weight:bold;
+    font-size:var(--par-1);
+    color:var(--shade-100);
+  }
+
+  /* --projects -- */
+  #projects{
+    width:400px;
+  }
+  .project{
+    align-items:start;
+  }
+  .project .description{
+    text-align:start;
+  }
+  .project .project-icons{
+    margin-top:20px;
+    align-self: end;
+  }
 }
