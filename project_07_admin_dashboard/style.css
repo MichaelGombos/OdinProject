@@ -34,6 +34,9 @@ h1,h2,h3,h4{
   align-items: center;
   padding:20px 10px;
 }
+#sidebar .desktop-navigation{
+  display:none;
+}
 #logo{
   height:50px;
   width:auto;
@@ -257,4 +260,95 @@ hr{
     margin-top:20px;
     align-self: end;
   }
+}
+
+@media only screen and (min-width : 720px){
+  header .bottom-header #actions{
+    flex-direction:row;
+  }
+   #actions .button{
+    width:100%;
+  } 
+}
+
+@media only screen and (min-width : 1060px){
+  #main-grid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "sidebar sidebar"
+    "header header"
+    "projects announcements"
+    "projects trending";
+  }
+  /* ---sidebar--- */
+  #sidebar nav{
+    padding:20px 100px;
+  }
+
+  #sidebar .mobile-navigation{
+    display:none;
+  }
+
+  #sidebar .desktop-navigation{
+    display:flex;
+    flex-direction:row;
+    gap:30px;
+  }
+  #sidebar .desktop-navigation p{
+    color:var(--shade-0);
+    display:none;
+  }
+  /* ---header--- */
+  header{
+    padding-left:100px;
+    padding-right:100px;
+  }
+  header .bottom-header, header .top-header{
+    width:100%;
+  }
+  header .top-header{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .top-header #profile{
+    gap:40px;
+  }
+  header .top-header #search{
+    width:50%;
+    margin-bottom:0;
+  }
+
+  header .bottom-header{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header #banner{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:20px;
+  }
+  #banner p{
+    color: var(--shade-100);
+  }
+
+  header #actions .button{
+    height:fit-content;
+  }
+  /* ---projects--- */
+  #projects{
+    margin-left:100px;
+    margin-right:unset;
+  }
+  /* --announcements + trending --- */
+  #announcements, #trending{
+    margin-left:auto;
+    margin-right:100px;
+  }
+  
 }
