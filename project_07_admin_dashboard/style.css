@@ -1,10 +1,31 @@
 /* styles for admin dashboard */
+/* 330px */
 body{
   background-color: var(--neutral-50);
 }
 
+#main-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: 
+  "sidebar"
+  "header"
+  "projects"
+  "announcements"
+  "trending";
+}
+p{
+  margin:0;
+}
+h1,h2,h3,h4{
+  margin:20px 0;
+}
+/*----------------- sidebar ----------------- */
+
 #sidebar{
-  background-color:var(--primary-700);
+  grid-area: sidebar;
+  background-color:var(--secondary-700);
 }
 #sidebar nav{
   display:flex;
@@ -17,13 +38,22 @@ body{
   height:50px;
   width:auto;
 }
+
+/*----------------- header -----------------*/
+
 header{
+  grid-area: header;
   background-color:var(--shade-0);
   border-bottom:1px solid var(--shade-100);
-  padding: 60px 10px;
+  padding: 30px 0;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  gap:40px;
+  margin-bottom:unset;
 }
 header .top-header{
-  margin-bottom:40px;
+  width:300px;
 }
 header #search{
   width:100%;
@@ -35,13 +65,19 @@ header #search input{
   box-sizing:border-box;
   padding:7px 7px;
   font-size:21px;
+  border:1px solid var(--neutral-500);
+  border-radius:10px;
+}
+header #search input::placeholder{
   color:var(--neutral-500);
 }
 header #search .icon{
   display:none;
 }
 header .bottom-header{
+  width:300px;
 }
+
 header #profile{
   display:flex;
   flex-direction:row;
@@ -75,22 +111,107 @@ header #banner{
   height:30px;
 }
 hr{
-  border: 2px solid var(--secondary-500);
+  border: 3px solid var(--secondary-500);
 }
 
+/*----------------- projects -----------------*/
+
+#projects{
+  grid-area:projects;
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+}
 .project,.announcements-background,.trending-background{
   background-color:var(--shade-0);
   border:1px solid var(--shade-100);
 }
 
-#main-grid{
-  display:grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto auto;
-  grid-template-areas: 
-  "sidebar"
-  "header"
-  "projects"
-  "announcements"
-  "trending";
+.project{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:50px 20px;
+  gap:10px;
+  box-sizing:border-box;
+}
+.project h3,.project p{
+  margin:0;
+}
+.project hr{
+  width:50%;
+  margin:0;
+}
+.project .description{
+  text-align:center;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow:hidden;
+}
+.project .project-icons{
+  display:flex;
+  gap:30px;
+}
+
+
+
+/*----------------- annoucements -----------------*/
+
+#announcements{
+  grid-area:announcements;
+  width:280px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.announcements-background,.trending-background{
+  width:100%;
+  padding:20px 20px;
+  box-sizing:border-box;
+}
+
+.announcement .description{
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+  overflow:hidden;
+  font-size:var(--par-2);
+}
+
+/*----------------- trending -----------------*/
+
+#trending{
+  grid-area:trending;
+  width:280px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#trending .trending-background{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap: 20px;
+}
+.trending-profile{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  gap:10px;
+}
+
+.trending-profile .trending-profile-info{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.trending-profile-link,.trending-profile-name{
+  font-size:var(--par-2);
+}
+.trending-profile-link{
+  color:var(--shade-100);
+}
+.trending-profile-name{
+  color:var(--neutral-600);
 }
