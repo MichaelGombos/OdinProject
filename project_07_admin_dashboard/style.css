@@ -279,7 +279,11 @@ hr{
     "sidebar sidebar"
     "header header"
     "projects announcements"
-    "projects trending";
+    "projects announcements"
+    "projects trending"
+    "projects trending"
+    "projects ."
+    "projects .";
   }
   /* ---sidebar--- */
   #sidebar nav{
@@ -345,10 +349,49 @@ hr{
     margin-left:100px;
     margin-right:unset;
   }
+  .project{
+    margin-top:0;
+    margin-bottom:60px;
+  }
   /* --announcements + trending --- */
   #announcements, #trending{
     margin-left:auto;
     margin-right:100px;
   }
   
+}
+
+@media only screen and (min-width : 1300px){
+  #main-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "sidebar sidebar sidebar"
+    "header header header"
+    "projects projects announcements"
+    "projects projects trending";
+  }
+
+  header{
+    padding-top:80px;
+    padding-bottom:80px;
+  }
+  #projects{
+    margin-left:50px;
+    width:100%;
+    display:flex;
+    column-gap:50px;
+    flex-direction:row;
+    flex-wrap:wrap;
+  }
+  #projects h2{
+    flex-basis:100%;
+  }
+  .project{
+    width:400px;
+  }
+
+  #announcements,#trending{
+    margin-right:50px
+  }
 }
