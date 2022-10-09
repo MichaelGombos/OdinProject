@@ -41,24 +41,24 @@
         </div>
         <div>
           <label for="pages">Pages</label>
-          <input type="number" id="Pages" name="Pages" placeholder="123">
+          <input type="number" id="pages" name="Pages" placeholder="123">
         </div>
 
         <div>
           <p>Did you read this?</p>
           <div class="radio-area">
             <div>
-              <label for="read-no">No...</label>
+              <label for="read">No...</label>
               <input type="radio" id="read-no" name="read">
             </div>
             <div>
-              <label for="read-no">Yes!</label>
-              <input type="radio" id="read-no" name="read">
+              <label for="read">Yes!</label>
+              <input type="radio" id="read-yes" name="read">
             </div>
           </div>
         </div>
 
-        <button type="submit" class="button button-ghost-primary-500" value="Submit">Submit</button>
+        <button type="submit" id="form-submit" class="button button-ghost-primary-500" value="Submit">Submit</button>
       </form>
     </header>
 
@@ -71,20 +71,13 @@
           <th>Pages</th>
           <th>Read</th>
         </tr>
-        <tr class="book-row">
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>444</td>
+        <!-- <tr class="book-row">
+          <td>book title</td>
+          <td>book author</td>
+          <td>0000</td>
           <td><input type="checkbox" name="read-toggle"><label for="read-toggle">No</label></td>
           <td><button class="button">Delete</button></td>
-        </tr>
-        <tr class="book-row">
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>332</td>
-          <td><input type="checkbox" name="read-toggle"><label for="read-toggle">No</label></td>
-          <td><button class="button">Delete</button></td>
-        </tr>
+        </tr> -->
       </table>
     </main>
   </div>
