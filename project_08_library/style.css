@@ -1,5 +1,9 @@
 /* styles for library  */
+html{
+  height:100%;
+}
 body{
+  height:100%;
   background-color:var(--neutral-100);
 }
 
@@ -10,6 +14,10 @@ ul,li, nav li{
 main{
 width:100%;
 overflow-x:scroll;
+}
+.page-wrap{
+  margin:0;
+  padding:0;
 }
 /* ---------------- header ---------------- */
 
@@ -90,4 +98,76 @@ main table td button.button{
   background-color:var(--error-500);
 }
 
+@media only screen and (min-width : 1060px){
 
+  /* header */
+  header{
+    flex-direction:column;
+    align-items: center;
+    gap:20px;
+  }
+
+  header .header-top{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:50px;
+  }
+
+  header .header-top ul{
+    flex-direction:row;
+  }
+  header form{
+    flex-direction:row;
+    gap:60px;
+  }
+  /* table */
+  main table{
+    min-width:100%;
+  }
+}
+
+@media only screen and (min-width : 1300px){
+
+  .page-wrap{
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    padding:0;
+  }
+  header{
+    height:100%;
+    width:30%;
+
+    flex-direction:column;
+    align-items: center;
+    justify-content: start;
+    gap:20px;
+
+    padding-top:200px;
+    margin-bottom:0;
+  }
+
+  header .header-top{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:50px;
+  }
+
+  header .header-top ul{
+    flex-direction:unset;
+  }
+  header form{
+    flex-direction:column;
+    gap:unset;
+  }
+
+  header .header-info{
+    display:unset;
+  }
+
+  table{
+    margin-top:200px;
+  }
+}
