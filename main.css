@@ -220,7 +220,11 @@ footer{
   outline:2px solid var(--shade-0);
   color:var(--shade-0);
 }
-
+.button-ghost-primary-500{
+  background-color:var(--shade-0);
+  outline:2px solid var(--primary-500);
+  color:var(--primary-500);
+}
 .button-ghost-secondary-500{
   background-color:var(--shade-0);
   outline:2px solid var(--secondary-500);
@@ -246,7 +250,7 @@ footer{
   transform: scale(1.1);
 }
 /*ghost button animation */
-.button-ghost-shade-0, .button-ghost-secondary-500, .button-ghost-secondary-300 {
+.button-ghost-shade-0, .button-ghost-primary-500, .button-ghost-secondary-500, .button-ghost-secondary-300 {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -261,6 +265,9 @@ footer{
 .button-ghost-shade-0:before {
   background: var(--shade-0);
 }
+.button-ghost-primary-500:before {
+  background: var(--primary-500);
+}
 .button-ghost-secondary-500:before {
   background: var(--secondary-500);
 }
@@ -268,7 +275,7 @@ footer{
   background: var(--secondary-300);
 }
 
-.button-ghost-shade-0:before ,.button-ghost-secondary-500:before,.button-ghost-secondary-300:before {
+.button-ghost-shade-0:before ,.button-ghost-primary-500:before,.button-ghost-secondary-500:before,.button-ghost-secondary-300:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -297,6 +304,11 @@ footer{
   outline-color:var(--secondary-500);
 }
 
+.button-ghost-primary-500:hover, .button-ghost-primary-500:focus, .button-ghost-primary-500:active {
+  color:var(--shade-0);
+  outline-color:var(--primary-500);
+}
+
 .button-ghost-secondary-300:hover, .button-ghost-secondary-300:focus, .button-ghost-secondary-300:active {
   color:var(--shade-0);
   outline-color:var(--secondary-300);
@@ -304,6 +316,7 @@ footer{
 
 .button-ghost-shade-0:hover:before, .button-ghost-shade-0:focus:before, .button-ghost-shade-0:active:before,
 .button-ghost-secondary-500:hover:before, .button-ghost-secondary-500:focus:before, .button-ghost-secondary-500:active:before,
+.button-ghost-primary-500:hover:before, .button-ghost-primary-500:focus:before, .button-ghost-primary-500:active:before,
 .button-ghost-secondary-300:hover:before, .button-ghost-secondary-300:focus:before, .button-ghost-secondary-300:active:before   {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
